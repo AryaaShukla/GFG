@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bulk Email Sender</title>
+</head>
+<body>
+  <h1>Send Bulk Emails</h1>
+
+  <form id="emailForm">
+    <label>Subject:</label><br>
+    <input type="text" id="subject" required><br><br>
+
+    <label>Message:</label><br>
+    <textarea id="message" rows="6" cols="50" required>Hi {{name}},</textarea><br><br>
+
+    <label>Recipients (JSON):</label><br>
+    <textarea id="recipients" rows="6" cols="50" required>
+[
+  {"name":"Alice","email":"alice@example.com"},
+  {"name":"Bob","email":"bob@example.com"}
+]
+    </textarea><br><br>
+
+    <button type="submit">Send Emails</button>
+  </form>
+
+  <pre id="result"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
